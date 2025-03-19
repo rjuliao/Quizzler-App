@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Evergage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let evergage = Evergage.sharedInstance()
+        
+        evergage.userId = "theAuthenticatedUserId"
+        
+
+        // If using Firebase Messaging, be sure to uncomment and do these before starting Evergage:
+        // FirebaseApp.configure()
+        // Messaging.messaging().delegate = self // Or whatever your delegate is
+
+        // Start Evergage with your Evergage Configuration:
+        evergage.start { (clientConfigurationBuilder) in
+            clientConfigurationBuilder.account = "sundoginteractive"
+            clientConfigurationBuilder.dataset = "rj_prft_demo"
+            clientConfigurationBuilder.usePushNotifications = true // If you want to use Evergage push notification campaigns
+            clientConfigurationBuilder.useDesignMode = true 
+        }
         // Override point for customization after application launch.
         return true
     }
