@@ -15,9 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        var mpcRaulDemo = Datasets()
         let evergage = Evergage.sharedInstance()
         
-        evergage.userId = "theAuthenticatedUserId"
+        
+        evergage.userId = evergage.anonymousId
         
 
         // If using Firebase Messaging, be sure to uncomment and do these before starting Evergage:
@@ -26,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Start Evergage with your Evergage Configuration:
         evergage.start { (clientConfigurationBuilder) in
-            clientConfigurationBuilder.account = "sundoginteractive"
-            clientConfigurationBuilder.dataset = "rj_prft_demo"
+            clientConfigurationBuilder.account = mpcRaulDemo.getAccount(datasetNo: 0)
+            clientConfigurationBuilder.dataset = mpcRaulDemo.getDatasetId(datasetNo: 0)
             clientConfigurationBuilder.usePushNotifications = true // If you want to use Evergage push notification campaigns
             clientConfigurationBuilder.useDesignMode = true 
         }
