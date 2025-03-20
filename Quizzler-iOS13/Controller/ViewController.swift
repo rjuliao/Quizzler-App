@@ -29,14 +29,17 @@ class ViewController: UIViewController {
         }
         
         quiz.nextQuestion()
+        evergageScreen?.trackAction("User click button answer for: \(userAnswer)")
         
         Timer.scheduledTimer(timeInterval: 0.2, target:self, selector: #selector(updateLabel), userInfo: nil, repeats: false)
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         updateLabel()
+        refreshScreen()
     }
 
     @objc func updateLabel() {
@@ -48,6 +51,18 @@ class ViewController: UIViewController {
         //progress  bar update
         progressBar.progress = quiz.getProgress()
     }
+    
+    private func onPullToRefresh() {
+        refreshScreen( )
+    }
+    
+    private func refreshScreen () {
+        //tracking the action on the page
+        evergageScreen?.trackAction("Question View")
+        
+    }
+    
+    
     
 }
 
