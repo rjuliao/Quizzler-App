@@ -8,6 +8,10 @@
 
 struct PersonalizationData {
     var accountId: String
-    var datasetIds: String
+    var datasetId: String
 
+    init(_ accountId: String, _ datasetId: String) {
+        self.accountId = accountId
+        self.datasetId = datasetId
+    }
 }
