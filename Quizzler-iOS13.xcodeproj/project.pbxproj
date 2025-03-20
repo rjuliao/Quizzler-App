@@ -17,6 +17,8 @@
 		CA0E3BAB2D8A03E8006565C6 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0E3BAA2D8A03DB006565C6 /* Question.swift */; };
 		CA0E3BB02D8A0EE5006565C6 /* QuizLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0E3BAF2D8A0EE5006565C6 /* QuizLogic.swift */; };
 		CA0E3BB22D8A48DA006565C6 /* Evergage.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0E3BB12D8A48DA006565C6 /* Evergage.xcframework */; };
+		CA4621812D8BAE4E001A1772 /* PersonalizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4621802D8BAE40001A1772 /* PersonalizationData.swift */; };
+		CA4621832D8BAFCC001A1772 /* Datasets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4621822D8BAFBF001A1772 /* Datasets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		CA0E3BAA2D8A03DB006565C6 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CA0E3BAF2D8A0EE5006565C6 /* QuizLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLogic.swift; sourceTree = "<group>"; };
 		CA0E3BB12D8A48DA006565C6 /* Evergage.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Evergage.xcframework; sourceTree = "<group>"; };
+		CA4621802D8BAE40001A1772 /* PersonalizationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalizationData.swift; sourceTree = "<group>"; };
+		CA4621822D8BAFBF001A1772 /* Datasets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datasets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 		CA0E3BAC2D8A0E4E006565C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CA4621822D8BAFBF001A1772 /* Datasets.swift */,
+				CA4621802D8BAE40001A1772 /* PersonalizationData.swift */,
 				CA0E3BAA2D8A03DB006565C6 /* Question.swift */,
 				CA0E3BAF2D8A0EE5006565C6 /* QuizLogic.swift */,
 			);
@@ -177,9 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */,
+				CA4621832D8BAFCC001A1772 /* Datasets.swift in Sources */,
 				CA0E3BB02D8A0EE5006565C6 /* QuizLogic.swift in Sources */,
 				CA0E3BAB2D8A03E8006565C6 /* Question.swift in Sources */,
 				AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */,
+				CA4621812D8BAE4E001A1772 /* PersonalizationData.swift in Sources */,
 				AD4BDE4C22D878BA005BA4CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
